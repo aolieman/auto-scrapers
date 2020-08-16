@@ -1,6 +1,6 @@
-## Autoscout24 Favorites Scraper
+## Favorites Scraper for Autoscout24
 
-### Setup Autoscout24
+### Setup Autoscout24 account
 - Log in to https://autoscout24.nl using Google Chrome.
 - Ensure that you have some offers in https://www.autoscout24.nl/account/favorites.
 
@@ -31,7 +31,7 @@ You should now have a file named `autoscout24-favs.csv`.
 
 ## Add Route Data from Google Maps
 
-### Setup Google Maps
+### Setup Google Maps account
 - Log in to Google Maps.
 - Set your home address.
 - Plan a route with your preferred mode of transport.
@@ -67,3 +67,12 @@ You should now have a file named `google-maps.csv`.
 
 The "overview" sheet should now include values in the route-distance 
 and route-minutes columns.
+
+## Legal Issues
+
+Depending on your legal jurisdiction, limitations may apply to your use of this software.
+Users are responsible for obtaining legal advice regarding their use of this software.
+
+Usage of the Autoscout24 scraper may lead to a violation of the [EU Database Directive](https://en.wikipedia.org/wiki/Database_Directive)
+or similar copyright protections. It could be argued that data exported from
+the scraper is a partial reproduction of an Autoscout24 database. 
