@@ -1,4 +1,12 @@
-<a target="_blank" href="https://github.com/aolieman/auto-scrapers/raw/master/media/as24-sheet-demo.mp4"><img alt="Animation of filled spreadsheet" src="https://github.com/aolieman/auto-scrapers/raw/master/media/as24-sheet-demo.gif" /></a>
+# Auto Scrapers
+A collection of configurations and scripts to aid in the search for secondhand car offers.
+Follow the instructions to gather car offers in a spreadsheet, and to precalculate the travel 
+time to these cars from your own location. Happy hunting!
+
+<a target="_blank" href="https://alioli.keybase.pub/media/as24-sheet-demo.mp4"><img alt="Animation of filled spreadsheet" src="https://github.com/aolieman/auto-scrapers/raw/master/media/as24-sheet-demo.gif" /></a>
+
+Before proceeding with the instructions below, first download and extract [master.zip](https://github.com/aolieman/auto-scrapers/archive/master.zip)
+or clone this git repository.
 
 ## Favorites Scraper for Autoscout24
 
