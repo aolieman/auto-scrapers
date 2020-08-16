@@ -1,0 +1,93 @@
+{
+    "_id": "google-maps",
+    "startUrl": [
+        "INSERT maps.google.com URLs here"
+    ],
+    "selectors": [
+        {
+            "id": "directions",
+            "type": "SelectorElementClick",
+            "parentSelectors": [
+                "_root"
+            ],
+            "selector": "div#app-container",
+            "multiple": false,
+            "delay": "700",
+            "clickElementSelector": "button[data-value=\"Directions\"]",
+            "clickType": "clickOnce",
+            "discardInitialElements": "discard",
+            "clickElementUniquenessType": "uniqueText"
+        },
+        {
+            "id": "selected-route",
+            "type": "SelectorElement",
+            "parentSelectors": [
+                "start-home"
+            ],
+            "selector": "div.section-directions-trip.selected",
+            "multiple": false,
+            "delay": 0
+        },
+        {
+            "id": "route-duration",
+            "type": "SelectorText",
+            "parentSelectors": [
+                "selected-route"
+            ],
+            "selector": "div.section-directions-trip-duration > span:nth-of-type(1)",
+            "multiple": false,
+            "regex": "",
+            "delay": 0
+        },
+        {
+            "id": "route-distance",
+            "type": "SelectorText",
+            "parentSelectors": [
+                "selected-route"
+            ],
+            "selector": "div.section-directions-trip-distance div",
+            "multiple": false,
+            "regex": "[\\d\\.]+",
+            "delay": 0
+        },
+        {
+            "id": "starting-point",
+            "type": "SelectorElementClick",
+            "parentSelectors": [
+                "directions"
+            ],
+            "selector": "div#content-container",
+            "multiple": false,
+            "delay": "700",
+            "clickElementSelector": "div#directions-searchbox-0 input",
+            "clickType": "clickOnce",
+            "discardInitialElements": "discard",
+            "clickElementUniquenessType": "uniqueCSSSelector"
+        },
+        {
+            "id": "start-home",
+            "type": "SelectorElementClick",
+            "parentSelectors": [
+                "starting-point"
+            ],
+            "selector": "_parent_",
+            "multiple": false,
+            "delay": "1500",
+            "clickElementSelector": "div#omnibox-directions div.maps-sprite-suggest-home",
+            "clickType": "clickOnce",
+            "discardInitialElements": "discard",
+            "clickElementUniquenessType": "uniqueCSSSelector"
+        },
+        {
+            "id": "transit-duration",
+            "type": "SelectorText",
+            "parentSelectors": [
+                "selected-route"
+            ],
+            "selector": "div.section-directions-trip-duration",
+            "multiple": false,
+            "regex": "",
+            "delay": 0
+        }
+    ]
+}
