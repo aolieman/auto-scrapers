@@ -1,3 +1,5 @@
+[![Animation of filled spreadsheet](https://keybase.pub/alioli/media/as24-sheet-demo.gif)](https://keybase.pub/alioli/media/as24-sheet-demo.mp4)
+
 ## Favorites Scraper for Autoscout24
 
 ### Setup Autoscout24 account
@@ -28,6 +30,9 @@ You should now have a file named `autoscout24-favs.csv`.
 - File > Import: `autoscout24-favs.csv`.
 - "Replace data at selected cell".
 - Find & replace (Ctrl+H) "null" with an empty string.
+
+See the formatted result in the "overview" sheet.
+You may sort, filter, and set up views here.
 
 ## Add Route Data from Google Maps
 
