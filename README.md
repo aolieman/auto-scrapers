@@ -1,4 +1,4 @@
-[![Animation of filled spreadsheet](https://keybase.pub/alioli/media/as24-sheet-demo.gif)](https://keybase.pub/alioli/media/as24-sheet-demo.mp4)
+[![Animation of filled spreadsheet](https://alioli.keybase.pub/media/as24-sheet-demo.gif)](https://alioli.keybase.pub/media/as24-sheet-demo.mp4)
 
 ## Favorites Scraper for Autoscout24
 
