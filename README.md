@@ -1,54 +1,69 @@
 ## Autoscout24 Favorites Scraper
 
 ### Setup Autoscout24
-- log in to autoscout24.nl
-- ensure that you have some offers in https://www.autoscout24.nl/account/favorites
+- Log in to https://autoscout24.nl using Google Chrome.
+- Ensure that you have some offers in https://www.autoscout24.nl/account/favorites.
 
 ### Setup Web Scraper
-- Install https://chrome.google.com/webstore/detail/web-scraper-free-web-scra/jnhgnonknehpejjnehehllkliplmbmhn?hl=en
-- see documentation at https://webscraper.io/documentation
-- open Web Scraper: https://webscraper.io/documentation/open-web-scraper
-- "Create new sitemap" > Import Sitemap
-- paste the contents of autoscout24-favs.json
-- "Import Sitemap" (button)
+- Install https://chrome.google.com/webstore/detail/web-scraper-free-web-scra/jnhgnonknehpejjnehehllkliplmbmhn?hl=en.
+- See documentation at https://webscraper.io/documentation.
+- Open Web Scraper: https://webscraper.io/documentation/open-web-scraper.
+- "Create new sitemap" > Import Sitemap.
+- Paste the contents of `autoscout24-favs.json`.
+- "Import Sitemap" (button).
 
 ### Scrape car offers
-- open devtools (F12)
-- select Web Scraper tab
-- select autoscout24-favs sitemap
-- context menu > Scrape (⏳)
-- context menu > Export data as CSV
+- Open Chrome devtools (F12).
+- Select Web Scraper tab.
+- Select autoscout24-favs sitemap.
+- Sitemap context menu > Scrape (⏳).
+- Sitemap context menu > Export data as CSV.
+
+You should now have a file named `autoscout24-favs.csv`.
 
 ### Load offer data into Google sheet
 - Make a copy of https://docs.google.com/spreadsheets/d/1AvqqCzwGTLo-HxeRyzd7-rusWk0VaEeCBxlYDj1bTNA/edit?usp=sharing.
-- open the autoscout24-favorieten sheet
-- select cell A1
-- File > Import: autoscout24-favs.csv
-- "Replace data at selected cell"
-- find & replace "null" with an empty string
+- Open the autoscout24-favs sheet.
+- Select cell A1.
+- File > Import: `autoscout24-favs.csv`.
+- "Replace data at selected cell".
+- Find & replace (Ctrl+H) "null" with an empty string.
 
-## Add route data from Google Maps
+## Add Route Data from Google Maps
 
 ### Setup Google Maps
-- log in to Google Maps
-- set your home address
-- plan a route with your preferred mode of transport
-- the scraper will use these settings
+- Log in to Google Maps.
+- Set your home address.
+- Plan a route with your preferred mode of transport.
+
+The scraper will use the home address that you set,
+and will plan routes with the mode of transport that was last selected.
+
+### Install Python v3.6+
+See https://www.python.org/downloads/.
+Windows 10 users can install Python from the Microsoft Store, 
+or by typing `python` in a PowerShell window.
+
+Please confirm your Python version by typing `python -v` into a shell.
+You may have to use the `python3` program instead, if you also have an old v2.x installed.
 
 ### Scrape Google Maps data
-- copy `vendor-map` from autoscout24-favs.csv into maps-urls.txt
-- deduplicate: `sort -uo maps-urls.txt maps-urls.txt` (linux)
-- add the urls as a valid `startUrl` array into google-maps.json
-- in Web Scraper, go back to Sitemaps
-- delete `google-maps` with the red button
-- Create new sitemap > Import sitemap
-- paste the updated google-maps.json
-- "Import Sitemap" (button)
-- context menu > Scrape (⏳)
-- context menu > Export data as CSV
+- Run `python fill_maps_start_urls.py autoscout24-favs.csv google-maps.json` in a shell.
+- In Web Scraper, go back to Sitemaps.
+- Delete `google-maps` with the red button, if it exists.
+- "Create new sitemap" > Import sitemap.
+- Paste the updated `google-maps.out.json`.
+- "Import Sitemap" (button).
+- Sitemap context menu > Scrape (⏳).
+- Sitemap context menu > Export data as CSV.
+
+You should now have a file named `google-maps.csv`.
 
 ### Load travel data into Google sheet
-- open the google-maps sheet
-- select cell A1
-- File > Import: google-maps.csv
-- "Replace data at selected cell"
+- Open the google-maps sheet.
+- Select cell A1.
+- File > Import: `google-maps.csv`.
+- "Replace data at selected cell".
+
+The "overview" sheet should now include values in the route-distance 
+and route-minutes columns.

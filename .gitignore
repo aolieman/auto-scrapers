@@ -1,4 +1,5 @@
 *.pyc
 *.csv
+*.out.json
 .idea/
 2019/
