@@ -1,4 +1,4 @@
-<a target="_blank" href="https://alioli.keybase.pub/media/as24-sheet-demo.mp4"><img alt="Animation of filled spreadsheet" src="https://alioli.keybase.pub/media/as24-sheet-demo.gif" /></a>
+<a target="_blank" href="https://github.com/aolieman/auto-scrapers/raw/master/media/as24-sheet-demo.mp4"><img alt="Animation of filled spreadsheet" src="https://github.com/aolieman/auto-scrapers/raw/master/media/as24-sheet-demo.gif" /></a>
 
 ## Favorites Scraper for Autoscout24
 
