@@ -1,4 +1,4 @@
-[![Animation of filled spreadsheet](https://alioli.keybase.pub/media/as24-sheet-demo.gif)](https://alioli.keybase.pub/media/as24-sheet-demo.mp4)
+<a target="_blank" href="https://alioli.keybase.pub/media/as24-sheet-demo.mp4"><img alt="Animation of filled spreadsheet" src="https://alioli.keybase.pub/media/as24-sheet-demo.gif" /></a>
 
 ## Favorites Scraper for Autoscout24
 
